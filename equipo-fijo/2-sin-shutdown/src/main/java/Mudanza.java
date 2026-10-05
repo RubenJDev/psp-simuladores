@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+public class Mudanza {
+    private static final int[] KILOS = {12, 8, 15, 10, 20, 5};
+
+    public static void main(String[] args) throws Exception {
+        long inicio = System.nanoTime();
+        // la cuadrilla: un número FIJO de hilos para todas las cajas
+        ExecutorService cuadrilla = Executors.newFixedThreadPool(2);
+
+        List<Future<Integer>> cajas = new ArrayList<>();
+        for (int kilos : KILOS) {
+            // submit() la deja en la cola: la baja el primer mozo libre
+            cajas.add(cuadrilla.submit(() -> bajar(kilos)));
+        }
+
+        int total = 0;
+        for (Future<Integer> caja : cajas) {
+            total += caja.get();  // espera a que esa caja esté abajo
+        }
+        long segundos = (System.nanoTime() - inicio) / 1_000_000_000L;
+        System.out.println(KILOS.length + " cajas, " + total
+                + " kg, en " + segundos + " s");
+
+        // nadie les dice que se vayan: se quedan esperando más cajas,
+        // y mientras haya hilos vivos el programa no termina
+        System.out.println("Cajas abajo; la cuadrilla sigue "
+                + "en la puerta");
+    }
+
+    private static int bajar(int kilos) throws InterruptedException {
+        Thread.sleep(1000);  // cada caja, un segundo escalera abajo
+        return kilos;
+    }
+}
