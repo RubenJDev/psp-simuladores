@@ -1,11 +1,10 @@
 # Simuladores de PSP
 
-Los programas Java de los simuladores de [rubenjarne.dev/psp](https://rubenjarne.dev/psp), uno por cada
-caso que se puede montar en cada simulador. Cada carpeta es un proyecto que se ejecuta tal cual: abre
-`src/main/java`, el fichero de la clase, y pulsa el triángulo verde junto a `main`.
+Los programas de los simuladores de [rubenjarne.dev/psp](https://rubenjarne.dev/psp), uno por
+cada caso que se puede montar en cada simulador. Cada carpeta es un proyecto que se ejecuta tal cual: abre `src/main/java`, el fichero de la clase, y pulsa el triángulo verde junto a `main`.
 
-Lo normal es no navegar por aquí: el botón **«Ábrelo en IntelliJ»** del simulador abre directamente el
-programa del caso que tienes montado. Si el repositorio cambia, en IntelliJ: **Git → Pull**.
+Lo normal es no navegar por aquí: el botón **«Ábrelo en IntelliJ»** del simulador abre
+directamente el programa del caso que tienes montado. Si el repositorio cambia: **Git → Pull**.
 
 Este repositorio lo genera la web a partir de sus simuladores: no se edita a mano.
 
