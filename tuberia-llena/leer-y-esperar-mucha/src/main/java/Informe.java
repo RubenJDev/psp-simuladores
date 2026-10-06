@@ -3,8 +3,8 @@ import java.io.InputStreamReader;
 import java.nio.file.Path;
 
 public class Informe {
-    // cuántas hojas escribe el hijo por su salida estándar
-    private static final int HOJAS = 100_000;
+    // cuántas líneas escribe el hijo por su salida estándar
+    private static final int LINEAS = 100_000;
 
     private static final String JAVA =
             Path.of(System.getProperty("java.home"), "bin", "java")
@@ -27,7 +27,7 @@ public class Informe {
         // cuando readLine() devuelve null, el hijo ya ha cerrado
         int leidas = leer(hijo);
         int codigo = hijo.waitFor();
-        System.out.println(leidas + " hojas, código " + codigo);
+        System.out.println(leidas + " líneas, código " + codigo);
     }
 
     private static int leer(Process hijo) throws Exception {
@@ -42,8 +42,8 @@ public class Informe {
     }
 
     private static void escribirInforme() {
-        for (int i = 1; i <= HOJAS; i++) {
-            System.out.println("hoja " + i);
+        for (int i = 1; i <= LINEAS; i++) {
+            System.out.println("linea " + i);
         }
     }
 }
