@@ -88,10 +88,24 @@
     <module>semaforo/tres-sin-finally</module>
     <module>semaforo/una-finally</module>
     <module>semaforo/una-sin-finally</module>
-    <module>start-y-join/run-con-join</module>
-    <module>start-y-join/run-sin-join</module>
-    <module>start-y-join/start-con-join</module>
-    <module>start-y-join/start-sin-join</module>
+    <module>start-y-join/crear-join-abierta</module>
+    <module>start-y-join/crear-join-cerrada</module>
+    <module>start-y-join/crear-sin-esperar-abierta</module>
+    <module>start-y-join/crear-sin-esperar-cerrada</module>
+    <module>start-y-join/crear-sleep-abierta</module>
+    <module>start-y-join/crear-sleep-cerrada</module>
+    <module>start-y-join/run-join-abierta</module>
+    <module>start-y-join/run-join-cerrada</module>
+    <module>start-y-join/run-sin-esperar-abierta</module>
+    <module>start-y-join/run-sin-esperar-cerrada</module>
+    <module>start-y-join/run-sleep-abierta</module>
+    <module>start-y-join/run-sleep-cerrada</module>
+    <module>start-y-join/start-join-abierta</module>
+    <module>start-y-join/start-join-cerrada</module>
+    <module>start-y-join/start-sin-esperar-abierta</module>
+    <module>start-y-join/start-sin-esperar-cerrada</module>
+    <module>start-y-join/start-sleep-abierta</module>
+    <module>start-y-join/start-sleep-cerrada</module>
     <module>tuberia-llena/a-fichero-mucha</module>
     <module>tuberia-llena/a-fichero-poca</module>
     <module>tuberia-llena/esperar-y-leer-mucha</module>

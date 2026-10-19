@@ -20,5 +20,5 @@ Este repositorio lo genera la web a partir de sus simuladores: no se edita a man
 - `procesos-en-paralelo/`: 8 casos
 - `productor-consumidor/`: 6 casos
 - `semaforo/`: 5 casos
-- `start-y-join/`: 4 casos
+- `start-y-join/`: 18 casos
 - `tuberia-llena/`: 6 casos
