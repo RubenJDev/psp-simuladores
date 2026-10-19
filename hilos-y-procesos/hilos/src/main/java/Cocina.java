@@ -5,9 +5,9 @@ public class Cocina {
     public static void main(String[] args) throws InterruptedException {
         // Ana es otro hilo del MISMO proceso; Bruno es main
         Thread ana = new Thread(() -> {
-            huevos = 0;  // Ana se lleva la última docena
+            huevos = 0;  // Ana se lleva la docena
             System.out.println("Ana: me he llevado los huevos");
-        });
+        }, "ana");
         ana.start();
         ana.join();  // Bruno abre la nevera cuando Ana ha terminado
 

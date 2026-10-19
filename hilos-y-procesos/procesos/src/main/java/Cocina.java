@@ -10,7 +10,7 @@ public class Cocina {
 
     public static void main(String[] args) throws Exception {
         if (args.length > 0 && args[0].equals("ana")) {
-            huevos = 0;  // Ana vacía SU nevera, no la de Bruno
+            huevos = 0;  // Ana se lleva la docena
             System.out.println("Ana: me he llevado los huevos");
             return;
         }
@@ -21,9 +21,11 @@ public class Cocina {
                 "Cocina", "ana")
                 .inheritIO()
                 .start();
-        ana.waitFor();  // Bruno abre la nevera cuando Ana ha terminado
+        int codigo = ana.waitFor();  // Bruno espera a que Ana acabe
 
         // Bruno es el proceso padre, y mira en la suya
+        System.out.println("Bruno: Ana ha acabado con el código "
+                + codigo);
         System.out.println("Bruno: quedan " + huevos + " huevos");
     }
 }
