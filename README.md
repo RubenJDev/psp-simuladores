@@ -11,8 +11,9 @@ Este repositorio lo genera la web a partir de sus simuladores: no se edita a man
 - `condicion-de-carrera/`: 4 casos
 - `equipo-fijo/`: 6 casos
 - `esperar-y-avisar/`: 6 casos
+- `estados-de-un-hilo/`: 36 casos
 - `hilos-y-procesos/`: 14 casos
-- `incremento-no-atomico/`: 4 casos
+- `incremento-no-atomico/`: 8 casos
 - `interbloqueo/`: 4 casos
 - `lanzar-y-esperar/`: 8 casos
 - `parar-un-hilo/`: 4 casos

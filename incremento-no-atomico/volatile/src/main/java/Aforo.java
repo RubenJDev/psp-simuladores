@@ -3,10 +3,12 @@ public class Aforo {
     // pero leer, sumar y escribir siguen siendo tres pasos
     private static volatile int pizarra = 0;
 
-    public static void main(String[] args) throws InterruptedException {
-        // cuánta gente entra por cada puerta: java Aforo 10
+    public static void main(String[] args)
+            throws InterruptedException {
+        // cuánta gente llega a cada puerta: java Aforo 10
         int porPuerta = args.length > 0
                 ? Integer.parseInt(args[0]) : 100_000;
+        long inicio = System.nanoTime();
 
         Thread norte = new Thread(() -> abrir(porPuerta), "norte");
         Thread sur = new Thread(() -> abrir(porPuerta), "sur");
@@ -15,8 +17,10 @@ public class Aforo {
         norte.join();
         sur.join();
 
+        long ms = (System.nanoTime() - inicio) / 1_000_000;
         System.out.println("Han entrado " + 2 * porPuerta
-                + " y la pizarra dice " + pizarra);
+                + " y la pizarra dice " + pizarra
+                + " (" + ms + " ms)");
     }
 
     private static void abrir(int personas) {
